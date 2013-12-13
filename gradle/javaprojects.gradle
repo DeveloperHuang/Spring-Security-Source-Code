@@ -123,7 +123,6 @@ configurations.all {
 
 test {
     jvmArgs = ['-ea', '-Xmx500m', '-XX:MaxPermSize=128M']
-    maxParallelForks = guessMaxForks()
     logging.captureStandardOutput(LogLevel.INFO)
 }
 
