@@ -136,6 +136,17 @@ configure(coreModuleProjects) {
         testResultsDir = file("$buildDir/spring4-test-results/")
         testReportDir = file("$buildDir/reports/spring4-tests/")
     }
+
+    test {
+        beforeTest { descriptor ->
+            logger.lifecycle("Running test: " + descriptor)
+         }
+    }
+    spring4Test {
+        beforeTest { descriptor ->
+            logger.lifecycle("Running test: " + descriptor)
+         }
+    }
     check.dependsOn spring4Test
 }
 
