@@ -139,12 +139,12 @@ configure(coreModuleProjects) {
 
     test {
         beforeTest { descriptor ->
-            logger.lifecycle("Running test: " + descriptor)
+            //logger.lifecycle("Running test: " + descriptor)
          }
     }
     spring4Test {
         beforeTest { descriptor ->
-            logger.lifecycle("Running test: " + descriptor)
+            //logger.lifecycle("Running test: " + descriptor)
          }
     }
     check.dependsOn spring4Test
